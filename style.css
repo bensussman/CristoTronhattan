@@ -19,9 +19,12 @@ table {
 img {
 	position: absolute;
 	z-index: -2;
+	-webkit-transform: rotate(-0.3deg);
+    transform: rotate(-0.3deg);
 }
 
-.avenue {background-color:black;}
+.avenue {background-color:green;}
+.street td {background-color:green;}
 
 tr:nth-child(50) td:nth-child(50) {
 	background:#ff0000;

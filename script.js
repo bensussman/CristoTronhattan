@@ -2,7 +2,7 @@ var trs = 100;
 var tds = 100;
 function isAvenue(col)
 {
-    return col % 3 == 0 
+    return col % 2 == 0 
 }
 
 document.write("<table id='map' border='1px'>");

@@ -22,3 +22,6 @@ img {
 
 .avenue {background-color:black;}
 
+tr:nth-child(50) td:nth-child(50) {
+	background:#ff0000;
+}

@@ -1,4 +1,4 @@
-var car1 = [100,100];
+var car1 = [4,4];
 var changeColor = function(x,y){
 	var selector = 'tr:nth-child('+Math.floor(y).toString()+') td:nth-child('+Math.floor(x).toString()+')';
 	console.log(typeof selector);
@@ -16,7 +16,6 @@ $(document).on('keypress', function(event){
 				console.log('up');
 				car1[1] = car1[1] - 3;
 				console.log(car1);
-				changeColor(car1[0]/3,car1[1]/3);
 			} else if (keyCode == right){
 				console.log('right');
 				car1[0] = car1[0] + 3;
@@ -30,5 +29,6 @@ $(document).on('keypress', function(event){
 				car1[1] = car1[1] + 3;
 				console.log(car1);
 			}
+			changeColor(car1[0]/3,car1[1]/3);
 			
 });

@@ -38,6 +38,8 @@ $(function(){
 });
 $(document).on('keypress', function(event){
 	var keyCode = event.keyCode;
+            var clickSound = new Audio('bityes.wav');
+            clickSound.play();
 			up = 119,
 			right = 100,
 			left = 97,

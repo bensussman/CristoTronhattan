@@ -30,7 +30,7 @@ var changeColor = function(x,y){
     y++;
     console.log("x:"+ x + " y:" + y)
 	var selector = 'tr:nth-child('+y.toString()+') td:nth-child('+x.toString()+')';
-	$(selector).css('background', 'red');
+	$(selector).addClass('visited');
 	// $('tr:nth-child(50) td:nth-child(49)').css('background', 'yellow');
 }; 
 $(function(){

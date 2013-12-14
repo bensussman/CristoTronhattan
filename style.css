@@ -25,5 +25,7 @@ img {
 
 .avenue {background-color:green;}
 .street td {background-color:green;}
-
+.visited {
+    background-color:red !important;
+}
 

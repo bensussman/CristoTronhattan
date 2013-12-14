@@ -19,6 +19,8 @@ table {
 img {
 	position: absolute;
 	z-index: -2;
+	-webkit-transform: rotate(-0.3deg);
+    transform: rotate(-0.3deg);
 }
 
 .avenue {background-color:black;}

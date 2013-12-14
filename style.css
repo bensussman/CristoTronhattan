@@ -26,6 +26,4 @@ img {
 .avenue {background-color:green;}
 .street td {background-color:green;}
 
-tr:nth-child(50) td:nth-child(50) {
-	background:#ff0000;
-}
+

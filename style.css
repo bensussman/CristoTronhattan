@@ -23,6 +23,6 @@ img {
     transform: rotate(-0.3deg);
 }
 
-.avenue {background-color:black;}
-.street td {background-color:black;}
+.avenue {background-color:green;}
+.street td {background-color:green;}
 

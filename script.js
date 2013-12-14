@@ -1,11 +1,11 @@
-var trs = 34;
-var tds = 12;
+var trs = 100;
+var tds = 100;
 
-document.write("<table id='map'>");
+document.write("<table id='map' border='1px'>");
 for (var i =0 ; i < trs; i++) {
     document.write("<tr>");
     for (var x =0 ; x < tds; x++) {
-        document.write("<td>"+x+"</td>");
+        document.write("<td></td>");
     }
     document.write("</tr>");
 }

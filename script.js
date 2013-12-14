@@ -23,7 +23,7 @@ function isAvenue(col) {
     return avenues[col]; 
 }
 
-var carX = 0;
+var carX = 73;
 var carY = 0;
 var changeColor = function(x,y){
     x++;

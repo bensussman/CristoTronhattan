@@ -25,19 +25,21 @@ function isAvenue(col) {
 
 var carX = 73;
 var carY = 0;
+var getGridNode = function(x,y) {
+    var selector = 'tr:nth-child('+(y+1).toString()+') '
+    selector += 'td:nth-child('+(x+1).toString()+')';
+    return $(selector);
+}
 var changeColor = function(x,y){
-    x++;
-    y++;
-    console.log("x:"+ x + " y:" + y)
-	var selector = 'tr:nth-child('+y.toString()+') td:nth-child('+x.toString()+')';
-	$(selector).css('background', 'red');
-	// $('tr:nth-child(50) td:nth-child(49)').css('background', 'yellow');
+    getGridNode(x,y).addClass('visited');
 }; 
 $(function(){
     changeColor(carX,carY);
 });
 $(document).on('keypress', function(event){
 	var keyCode = event.keyCode;
+            var clickSound = new Audio('bityes.wav');
+            clickSound.play();
 			up = 119,
 			right = 100,
 			left = 97,
@@ -59,7 +61,10 @@ $(document).on('keypress', function(event){
 				newCarY = carY + 1;
 			}
 			
-			if (isAvenue(newCarX) || isStreet(newCarY)) {
+			var gridNode = getGridNode(newCarX, newCarY);
+			
+			if (!gridNode.hasClass('visited') &&
+			    (isAvenue(newCarX) || isStreet(newCarY))) {
 			    carY = newCarY;
 			    carX = newCarX;
 			}

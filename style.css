@@ -3,5 +3,5 @@
 .row3 {background-color:orange;}
 .row4 {background-color:purple;}
 .box1 {background-color:black;}
-.table1 tr td {width:16px; height:16px;  border=0px}
+#map tr td {width:16px; height:16px;  border=0px}
 table { border-collapse:collapse;}

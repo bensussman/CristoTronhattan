@@ -1,5 +1,5 @@
-var trs = 225;
-var tds = 100;
+var trs = 214;
+var tds = 95;
 var avenues = {
     0:true,
     4:true,

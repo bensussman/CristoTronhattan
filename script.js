@@ -43,8 +43,6 @@ $(function(){
 });
 $(document).on('keypress', function(event){
 	var keyCode = event.keyCode;
-            var clickSound = new Audio('bityes.wav');
-            clickSound.play();
 			up = 119,
 			right = 100,
 			left = 97,
@@ -69,11 +67,19 @@ $(document).on('keypress', function(event){
 			if (isAvenue(newCarX) || isStreet(newCarY)) {
 			    carY = newCarY;
 			    carX = newCarX;
+                var clickSound = new Audio('bityes.wav');
+                clickSound.play();
 			}
+            else{
+                var clickSound = new Audio('bitno.wav');
+                clickSound.play();
+            }
 			
 			changeColor(carX,carY);
 			
 });
+
+function play
 
 
 document.write("<table id='map' border='1px'>");

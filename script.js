@@ -66,8 +66,9 @@ $(document).on('keypress', function(event){
 			
 			var gridNode = getGridNode(newCarX, newCarY);
 			
-			if (!gridNode.hasClass('visited') &&
-			    (isAvenue(newCarX) || isStreet(newCarY))) {
+			if (!gridNode.hasClass('visited')
+			    && (isAvenue(newCarX) || isStreet(newCarY))
+			    && !(newCarX < 0 || newCarY < 0 || newCarX >= tds || newCarY >= trs)) {
 			    carY = newCarY;
 			    carX = newCarX;
                 var clickSound = new Audio('bityes.wav');
@@ -79,7 +80,7 @@ $(document).on('keypress', function(event){
             }
 			
 			changeColor(carX,carY);
-			
+			console.log('current car position, x:' + carX + " y:" + carY)
 });
 
 

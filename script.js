@@ -82,8 +82,6 @@ $(document).on('keypress', function(event){
 			
 });
 
-function play
-
 
 document.write("<table id='map' border='1px'>");
 for (var i =0 ; i < trs; i++) {

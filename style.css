@@ -9,6 +9,7 @@
     border:0px;
     padding:0px;
 }
+
 table { 
 	border: none;
 	border-collapse:collapse;
@@ -18,3 +19,6 @@ img {
 	position: absolute;
 	z-index: -2;
 }
+
+.avenue {background-color:black;}
+

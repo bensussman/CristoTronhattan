@@ -1,0 +1,11 @@
+ .row1 {background-color: red;}
+.table1 tr td {width: 16px; height:16px;}
+.row2 {background-color: purple;}
+.row3 {background-color: black;}
+.row4 {background-color: orange;}
+.box1 {background-color: blue;}
+table
+{
+border-collapse:collapse;
+}
+.avenue {background-color: black;}

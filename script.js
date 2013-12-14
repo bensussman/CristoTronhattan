@@ -1,5 +1,6 @@
 var trs = 214;
 var tds = 95;
+playBackground()
 var avenues = {
     0:true,
     4:true,
@@ -23,15 +24,19 @@ function isAvenue(col) {
     return avenues[col]; 
 }
 
-var carX = 73;
-var carY = 0;
-var getGridNode = function(x,y) {
-    var selector = 'tr:nth-child('+(y+1).toString()+') '
-    selector += 'td:nth-child('+(x+1).toString()+')';
-    return $(selector);
+function playBackground(){
+    var clickSound = new Audio('The Grid.mp3');
+    clickSound.play();
 }
+var carX = 0;
+var carY = 0;
 var changeColor = function(x,y){
-    getGridNode(x,y).addClass('visited');
+    x++;
+    y++;
+    console.log("x:"+ x + " y:" + y)
+	var selector = 'tr:nth-child('+y.toString()+') td:nth-child('+x.toString()+')';
+	$(selector).css('background', 'red');
+	// $('tr:nth-child(50) td:nth-child(49)').css('background', 'yellow');
 }; 
 $(function(){
     changeColor(carX,carY);
@@ -61,10 +66,7 @@ $(document).on('keypress', function(event){
 				newCarY = carY + 1;
 			}
 			
-			var gridNode = getGridNode(newCarX, newCarY);
-			
-			if (!gridNode.hasClass('visited') &&
-			    (isAvenue(newCarX) || isStreet(newCarY))) {
+			if (isAvenue(newCarX) || isStreet(newCarY)) {
 			    carY = newCarY;
 			    carX = newCarX;
 			}
